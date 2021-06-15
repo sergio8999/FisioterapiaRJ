@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap');
+@import url('https://unpkg.com/leaflet@1.5.1/dist/leaflet.css');
+$noto-serif: 'Noto Serif', serif;
+$source-sans: 'Source Sans Pro', sans-serif;
+$josefin-serif:'Josefin Sans', sans-serif;
+
+/* #5ec9e9 */
+
+$primary:#35435b;
+$cyan:#17a2b8;
+
+/* Dropdwon */
+$dropdown-bg: $primary!important;
+$dropdown-border-color: transparent!important;
+$dropdown-link-color: white!important;
+$dropdown-link-hover-bg: $cyan!important;
+/* $dropdown-link-hover-color: $primary!important; */
+
+
+
+$color-white: #f1f1f1;
+$color-blue: #007bff;
+
+$color-background : #ebedef;
+
+body{
+    font-family: $source-sans;
+    background-color: $color-background!important;
+}
+
+#app{
+    font-family: $josefin-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @media (min-width: 960px){
+        font-size: 1.1rem;
+        line-height: 1.9rem;
+    }
+
+    .container{
+        width: 100vw;
+
+        @media (min-width: 960px){
+            width: 100%;
+        }
+    }      
+
+    h1{
+        font-family: $source-sans;
+        margin: 1rem auto;
+        letter-spacing: .2rem;
+        font-size: 3rem;
+        font-variant: small-caps;
+    
+        @media (min-width:998px) {
+            font-size: 4rem;
+        }
+    }
+
+    .b-sidebar {
+        background-color: $primary!important;
+        color: white!important;
+
+        svg{
+            color:white;
+        }
+
+        .b-sidebar-header{
+           padding-top: 1rem;
+         }
+
+        .nav-item{
+            color: white;
+        }
+    }
+}
+
+.btn-principal{
+background-color: $cyan!important;
+color: white;
+border: none!important;
+
+&:focus{
+    box-shadow: none!important;
+}
+
+&:hover{
+    background-color: darken($cyan, 4)!important;
+}
+
+&:disabled{
+    background-color: lighten($cyan, 4);
+}
+} 
+
+p{
+    margin: 0!important;
+}
+
+@media (min-width: 1200px){
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        max-width: 75%!important;
+    }
+}
+
+.p-component, .p-datepicker-group-container{
+    width: 100%;
+    
+    .p-datepicker-calendar{
+        text-align: center;
+    }
+}
+
+.swal2-styled.swal2-confirm{
+    background-color: $cyan!important;
+}
+
+.breadcrumb{
+    font-size: 1rem;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
